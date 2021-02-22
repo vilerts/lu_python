@@ -51,13 +51,20 @@ print(primes)
 
 
 # 6. Izveidot range() analogu, argumentu secībai nav nozīmes.
-def my_range(start, end):
+def my_range(*args):
+  start = args[0]
+  end = args[1]
+  step = 1 
+  if len(args) == 3 and args[2] != None:
+    step = args[2]
+  
   arr=[]
   counter = start
   while counter < end:
     arr.append(counter)
-    counter += 1
+    counter += step
   return arr
 
-numbers = [i for i in my_range(1,11)]
-print(numbers)
+print([i for i in my_range(1,10)])
+print([i for i in my_range(1,11,3)])
+
