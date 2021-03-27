@@ -52,19 +52,21 @@ print_ok()
 import random
 
 class Phone:
-  def __init__(self, brand, os):
-    self.brand = brand
-    self.os = os
-    self.number = ''.join([str(random.randint(0, 10)) for i in range(11)])
+    os = None
+    brand = None
+    def __init__(self):
+        self.number = ''.join([str(random.randint(0, 10)) for i in range(11)])
 
 class Samsung(Phone):
-  pass
+    os = "Android"
+    brand = "Galaxy"
 
 class Apple(Phone):
-  pass
+    os = "iOS"
+    brand = "iPhone"
 
-ph1 = Samsung("Galaxy","Android")
+ph1 = Samsung()
 print(f"Phone {ph1.brand}, {ph1.os}, {ph1.number}")
 
-ph1 = Apple("iPhone","iOS")
+ph1 = Apple()
 print(f"Phone {ph1.brand}, {ph1.os}, {ph1.number}")
