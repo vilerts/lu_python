@@ -17,7 +17,7 @@ print(type(r).__name__)
 
 #################################
 
-from fold_class_v7 import Cylinder
+from fold_class_v07 import Cylinder
 
 my_cylinder = Cylinder.Cylinder(radius=5,height=10)
 
@@ -28,7 +28,7 @@ print(my_cylinder.volume())
 
 #################################
 
-from fold_class_v7 import Money
+from fold_class_v07 import Money
 
 wallet = Money.Money2(euro=215)
 
@@ -39,7 +39,7 @@ print(wallet.pln())
 
 #################################
 
-from fold_class_v7.Human import Human, Student
+from fold_class_v07.Human import Human, Student
 
 human = Human(name="Rebecca", age=40)
 student = Student(name="Alex", age=21)

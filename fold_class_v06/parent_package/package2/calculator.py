@@ -1,5 +1,5 @@
-from fold_class_v6.parent_package.package1.subpackage.mult_div import *
-from fold_class_v6.parent_package.package1.sum_dif import *
+from fold_class_v06.parent_package.package1.subpackage.mult_div import *
+from fold_class_v06.parent_package.package1.sum_dif import *
 
 def runCalculator(var1, var2, operator):
   result = 0
