@@ -73,13 +73,13 @@ class Application:
 
 # Routes
 def index(request):
-    response = load_template('home.html')
-    return [response.substitute().encode()]
+    #response = load_template('home.html')
+    #return [response.substitute().encode()]
+    return Response(data='<h1>Hello</h1>')
 
 
-def test(request):
-    return ['test'.encode()]
-
+def latin(request):
+    return Response(data='Lorem ipsum')
 
 def student_grades(request):
     response = load_template('student.html')
@@ -103,10 +103,9 @@ def average(request):
 
 routes = {
     '/': index,
-    '/test': test,
     '/student_grades': student_grades,
     '/average': average,
-    '/favicon.ico': test,
+    '/favicon.ico': index,
 }
 
 SERVER_HOST = '127.0.0.1'
